@@ -7,7 +7,7 @@ public class ClientModel {
     private String address;
     private Integer numAddress;
     
-    //methods
+    //constructors
     public ClientModel(){
         name = "";
         lastName = "";
