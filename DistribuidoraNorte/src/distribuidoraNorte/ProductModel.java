@@ -2,54 +2,82 @@ package distribuidoraNorte;
 
 public class ProductModel {
 
-    String description;
-    Integer cant;
+    private String description;
+    private String code;
+    // cant is stock of product
+    private Integer cant;
     // for default the product is active
-    Boolean isActive;
-    float cost;
-    float price;
+    private Boolean isActive;
+    //cost = how much do you buy it?
+    private float cost;
+    // sale price
+    private float price;
+    private String area; //***
+    private String nameProvider; 
    
     //constructors 
     public ProductModel(){
         description = "";
+        code = "";
         cant = 0;
         isActive = true;
         cost = 0;
         price = 0;
+        area = ""; //*************
+        nameProvider = "";
     }
     
-    public ProductModel(String d, Integer c, float cst, float p){
-        description = d;
-        cant = c;
+    public ProductModel(String descr,String cd, Integer cantP, float cst, float priceP, String areaP, String nameProv){
+        description = descr;
+        code = cd;
+        cant = cantP;
         isActive = true;
         cost = cst;
-        price = p;
+        price = priceP;
+        area = areaP;
+        nameProvider = nameProv;
     }
     
     //sets
-    public void setDescription (String d){
-        description = d;        
+    public void setDescription (String descr){
+        description = descr;        
     }
     
-    public void setCant (Integer c){
-        cant = c;
+    public void setCode(String cd){
+        code = cd;
+    }
+    
+    public void setCant (Integer cantP){
+        cant = cantP;
     }
     
     public void setIsActive(Boolean isA){
         isActive = isA;
     }
     
-    public void setCost(float c){
-        cost = c;
+    public void setCost(float costP){
+        cost = costP;
     }
     
-    public void setPrice(float p){
-        price = p;
+    public void setPrice(float priceP){
+        price = priceP;
+    }
+    
+    public void setArea(String areaP){
+        area = areaP;
+    }
+    
+    public void setNameProvider(String nameProv){
+        nameProvider = nameProv;
     }
     
     //gets
     public String getDescription (){
         return description;        
+    }
+    
+    public String getCode (){
+        return code;        
     }
     
     public Integer getCant (){
@@ -68,4 +96,11 @@ public class ProductModel {
         return price;
     }
     
+    public String getArea(){
+        return area;
+    }
+    
+    public String getNameProvider(){
+        return nameProvider;
+    }
 }
