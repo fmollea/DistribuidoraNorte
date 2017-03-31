@@ -12,8 +12,10 @@ public class ProductModel {
     private float cost;
     // sale price
     private float price;
-    private String area; //***
+    private Area area;
     private String nameProvider; 
+    private Integer cantBuy;
+    private Integer cantSell;
    
     //constructors 
     public ProductModel(){
@@ -23,11 +25,13 @@ public class ProductModel {
         isActive = true;
         cost = 0;
         price = 0;
-        area = ""; //*************
+        area = null; 
         nameProvider = "";
+        cantBuy = 0;
+        cantSell = 0;
     }
     
-    public ProductModel(String descr,String cd, Integer cantP, float cst, float priceP, String areaP, String nameProv){
+    public ProductModel(String descr,String cd, Integer cantP, float cst, float priceP, Area areaP, String nameProv){
         description = descr;
         code = cd;
         cant = cantP;
@@ -36,6 +40,8 @@ public class ProductModel {
         price = priceP;
         area = areaP;
         nameProvider = nameProv;
+        cantBuy = 0;
+        cantSell = 0;
     }
     
     //sets
@@ -63,12 +69,20 @@ public class ProductModel {
         price = priceP;
     }
     
-    public void setArea(String areaP){
+    public void setArea(Area areaP){
         area = areaP;
     }
     
     public void setNameProvider(String nameProv){
         nameProvider = nameProv;
+    }
+    
+    public void setCantBuy(Integer cantB){
+        cantBuy = cantB;
+    }
+    
+    public void setCantSell(Integer cantS){
+        cantSell = cantS;
     }
     
     //gets
@@ -96,11 +110,19 @@ public class ProductModel {
         return price;
     }
     
-    public String getArea(){
+    public Area getArea(){
         return area;
     }
     
     public String getNameProvider(){
         return nameProvider;
+    }
+    
+    public Integer getCantBuy(){
+        return cantBuy;
+    }
+    
+    public Integer getCantSell(){
+        return cantSell;
     }
 }

@@ -1,5 +1,7 @@
 package distribuidoraNorte;
 
+//falta GETS!
+
 public class ProviderModel {
 
     private String name;
@@ -7,7 +9,7 @@ public class ProviderModel {
     private String address;
     private Integer numAddress;
     // area is rubro 
-    private String area; // ******
+    private Area area; 
     
     //constructors
     public ProviderModel() {
@@ -15,15 +17,15 @@ public class ProviderModel {
         city = "";
         address = "";
         numAddress = 0;
-        area = "";     // ***************
+        area = null;  
     }
     
-    public ProviderModel(String n, String c, String a, Integer na, String ar){
+    public ProviderModel(String n, String c, String a, Integer na, Area ar){
         name = n;
         city = c;
         address = a;
         numAddress = na;
-        area = ar;     // ***************
+        area = ar;     
     }
     
     //sets
@@ -44,7 +46,25 @@ public class ProviderModel {
         numAddress = na;
     }
     
-    public void setArea(String ar){
+    public void setArea(Area ar){
         area = ar;
+    }
+    
+    //gets
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getCity(){
+        return city;
+    }
+    
+    public String getAddress(){
+        return address;
+    }
+    
+    public Area getArea(){
+        return area;
     }
 }
