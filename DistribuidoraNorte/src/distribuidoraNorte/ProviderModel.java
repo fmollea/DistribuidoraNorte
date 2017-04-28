@@ -8,6 +8,7 @@ public class ProviderModel {
     private String city;
     private String address;
     private Integer numAddress;
+    private String numPhone;
     // area is rubro 
     private Area area; 
     
@@ -17,14 +18,16 @@ public class ProviderModel {
         city = "";
         address = "";
         numAddress = 0;
+        numPhone = "";
         area = null;  
     }
     
-    public ProviderModel(String n, String c, String a, Integer na, Area ar){
+    public ProviderModel(String n, String c, String a, Integer na, String np, Area ar){
         name = n;
         city = c;
         address = a;
         numAddress = na;
+        numPhone = np;
         area = ar;     
     }
     
@@ -46,6 +49,10 @@ public class ProviderModel {
         numAddress = na;
     }
     
+    public void setNumPhone(String np){
+        numPhone = np;
+    }
+    
     public void setArea(Area ar){
         area = ar;
     }
@@ -62,6 +69,10 @@ public class ProviderModel {
     
     public String getAddress(){
         return address;
+    }
+    
+    public String getNumPhone(){
+        return numPhone;
     }
     
     public Area getArea(){

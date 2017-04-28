@@ -10,8 +10,7 @@ public class ClientModel {
     private Integer numPhone;
     // for default the client is active
     private Boolean isActive;
-    //sumatory of cant buy
-    private float cantBuy;
+    
     
     //constructors
     public ClientModel(){
@@ -21,8 +20,7 @@ public class ClientModel {
         address = "";
         numAddress = 0;
         numPhone = 0;
-        isActive = true;
-        cantBuy = 0;
+        isActive = true;       
     }
     
     public ClientModel(String codeP, String nameP, String lastN, String addressP, Integer numAddr, Integer numP){
@@ -33,7 +31,6 @@ public class ClientModel {
         numAddress = numAddr;
         numPhone = numP;
         isActive = true;
-        cantBuy = 0;
     }
     
     //sets
@@ -65,9 +62,6 @@ public class ClientModel {
         isActive = isActiveP;
     }
     
-    public void setCantBuy(float cantB){
-        cantBuy = cantB;
-    }
     //gets
     public String getCode(){
         return code;
@@ -94,9 +88,5 @@ public class ClientModel {
     
     public Boolean getIsActive(){
         return isActive;
-    }
-    
-    public float getCantBuy(){
-        return cantBuy;
     }
 }

@@ -14,8 +14,6 @@ public class ProductModel {
     private float price;
     private Area area;
     private String nameProvider; 
-    private Integer cantBuy;
-    private Integer cantSell;
    
     //constructors 
     public ProductModel(){
@@ -27,8 +25,6 @@ public class ProductModel {
         price = 0;
         area = null; 
         nameProvider = "";
-        cantBuy = 0;
-        cantSell = 0;
     }
     
     public ProductModel(String descr,String cd, Integer cantP, float cst, float priceP, Area areaP, String nameProv){
@@ -40,8 +36,6 @@ public class ProductModel {
         price = priceP;
         area = areaP;
         nameProvider = nameProv;
-        cantBuy = 0;
-        cantSell = 0;
     }
     
     //sets
@@ -77,14 +71,6 @@ public class ProductModel {
         nameProvider = nameProv;
     }
     
-    public void setCantBuy(Integer cantB){
-        cantBuy = cantB;
-    }
-    
-    public void setCantSell(Integer cantS){
-        cantSell = cantS;
-    }
-    
     //gets
     public String getDescription (){
         return description;        
@@ -116,13 +102,5 @@ public class ProductModel {
     
     public String getNameProvider(){
         return nameProvider;
-    }
-    
-    public Integer getCantBuy(){
-        return cantBuy;
-    }
-    
-    public Integer getCantSell(){
-        return cantSell;
     }
 }
