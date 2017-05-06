@@ -1,5 +1,7 @@
 package distribuidoraNorte;
 
+import java.util.ArrayList;
+
 public class ClientModel {
 
     private String code;
@@ -7,7 +9,7 @@ public class ClientModel {
     private String lastName;
     private String address;
     private Integer numAddress;
-    private Integer numPhone;
+    private ArrayList<String> numPhone;
     // for default the client is active
     private Boolean isActive;
     
@@ -19,17 +21,19 @@ public class ClientModel {
         lastName = "";
         address = "";
         numAddress = 0;
-        numPhone = 0;
+        numPhone = new ArrayList();
+        numPhone.add("");
         isActive = true;       
     }
     
-    public ClientModel(String codeP, String nameP, String lastN, String addressP, Integer numAddr, Integer numP){
+    public ClientModel(String codeP, String nameP, String lastN, String addressP, Integer numAddr, String numP){
         code = codeP;
         name = nameP;
         lastName = lastN;
         address = addressP;
         numAddress = numAddr;
-        numPhone = numP;
+        numPhone = new ArrayList();
+        numPhone.add(numP);
         isActive = true;
     }
     
@@ -54,8 +58,8 @@ public class ClientModel {
         numAddress = numAddressP;
     }
     
-    public void setNumPhone(Integer numPhoneP){
-        numPhone = numPhoneP;
+    public void setNumPhone(String numPhoneP){
+        numPhone.add(numPhoneP);
     }
     
     public void setIsActive(Boolean isActiveP){
@@ -82,7 +86,7 @@ public class ClientModel {
         return numAddress;
     }
     
-    public Integer getNumPhone(){
+    public ArrayList<String> getNumPhone(){
         return numPhone;
     }
     
