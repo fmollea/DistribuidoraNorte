@@ -28,12 +28,12 @@ public class FrameMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        ButtonSearch = new javax.swing.JButton();
         ButtonClient = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        ButtonSell = new javax.swing.JButton();
         ButtonProvider = new javax.swing.JButton();
         ButtonProduct = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        ButtonBuy = new javax.swing.JButton();
         LabelTittle = new javax.swing.JLabel();
         LabelBackground = new javax.swing.JLabel();
 
@@ -41,16 +41,16 @@ public class FrameMain extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/client.jpg"))); // NOI18N
-        jButton1.setMaximumSize(new java.awt.Dimension(290, 266));
-        jButton1.setMinimumSize(new java.awt.Dimension(290, 266));
-        jButton1.setPreferredSize(new java.awt.Dimension(125, 125));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/search.jpg"))); // NOI18N
+        ButtonSearch.setMaximumSize(new java.awt.Dimension(290, 266));
+        ButtonSearch.setMinimumSize(new java.awt.Dimension(290, 266));
+        ButtonSearch.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonSearchActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
+        getContentPane().add(ButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
 
         ButtonClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/client.jpg"))); // NOI18N
         ButtonClient.setMaximumSize(new java.awt.Dimension(290, 266));
@@ -63,16 +63,16 @@ public class FrameMain extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/client.jpg"))); // NOI18N
-        jButton3.setMaximumSize(new java.awt.Dimension(290, 266));
-        jButton3.setMinimumSize(new java.awt.Dimension(290, 266));
-        jButton3.setPreferredSize(new java.awt.Dimension(125, 125));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ButtonSell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/sell.jpg"))); // NOI18N
+        ButtonSell.setMaximumSize(new java.awt.Dimension(290, 266));
+        ButtonSell.setMinimumSize(new java.awt.Dimension(290, 266));
+        ButtonSell.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonSell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ButtonSellActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        getContentPane().add(ButtonSell, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         ButtonProvider.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider.jpg"))); // NOI18N
         ButtonProvider.setMaximumSize(new java.awt.Dimension(290, 266));
@@ -96,16 +96,16 @@ public class FrameMain extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, -1, -1));
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/client.jpg"))); // NOI18N
-        jButton6.setMaximumSize(new java.awt.Dimension(290, 266));
-        jButton6.setMinimumSize(new java.awt.Dimension(290, 266));
-        jButton6.setPreferredSize(new java.awt.Dimension(125, 125));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBuy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/buy.jpg"))); // NOI18N
+        ButtonBuy.setMaximumSize(new java.awt.Dimension(290, 266));
+        ButtonBuy.setMinimumSize(new java.awt.Dimension(290, 266));
+        ButtonBuy.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                ButtonBuyActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        getContentPane().add(ButtonBuy, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
 
         LabelTittle.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         LabelTittle.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,17 +121,17 @@ public class FrameMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSearchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonSearchActionPerformed
 
     private void ButtonClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonClientActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonClientActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ButtonSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSellActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ButtonSellActionPerformed
 
     private void ButtonProviderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonProviderActionPerformed
         // TODO add your handling code here:
@@ -141,9 +141,9 @@ public class FrameMain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonProductActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void ButtonBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_ButtonBuyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,13 +181,13 @@ public class FrameMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonBuy;
     private javax.swing.JButton ButtonClient;
     private javax.swing.JButton ButtonProduct;
     private javax.swing.JButton ButtonProvider;
+    private javax.swing.JButton ButtonSearch;
+    private javax.swing.JButton ButtonSell;
     private javax.swing.JLabel LabelBackground;
     private javax.swing.JLabel LabelTittle;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton6;
     // End of variables declaration//GEN-END:variables
 }
