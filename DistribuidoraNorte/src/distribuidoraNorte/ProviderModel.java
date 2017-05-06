@@ -2,13 +2,16 @@ package distribuidoraNorte;
 
 //falta GETS!
 
+import java.util.ArrayList;
+
+
 public class ProviderModel {
 
     private String name;
     private String city;
     private String address;
     private Integer numAddress;
-    private String numPhone;
+    private ArrayList<String> numPhone;
     // area is rubro 
     private Area area; 
     
@@ -18,7 +21,8 @@ public class ProviderModel {
         city = "";
         address = "";
         numAddress = 0;
-        numPhone = "";
+        numPhone = new ArrayList();
+        numPhone.add("");
         area = null;  
     }
     
@@ -27,7 +31,8 @@ public class ProviderModel {
         city = c;
         address = a;
         numAddress = na;
-        numPhone = np;
+        numPhone = new ArrayList();
+        numPhone.add(np);
         area = ar;     
     }
     
@@ -50,7 +55,7 @@ public class ProviderModel {
     }
     
     public void setNumPhone(String np){
-        numPhone = np;
+        numPhone.add(np);
     }
     
     public void setArea(Area ar){
@@ -71,7 +76,7 @@ public class ProviderModel {
         return address;
     }
     
-    public String getNumPhone(){
+    public ArrayList<String> getNumPhone(){
         return numPhone;
     }
     
