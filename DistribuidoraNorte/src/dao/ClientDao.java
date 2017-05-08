@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
-/**
- *
- * @author fmollea
- */
+import distribuidoraNorte.ClientModel;
+import java.util.ArrayList;
+
+
 public interface ClientDao {
+    
+    public void addClientDao(ClientModel client);
+    
+    public void updateClientDao(ClientModel client);
+    
+    public void activeClientDao(ClientModel client);
+    
+    public void deleteClientDao(ClientModel client);
+    
+    //search client
+    public ClientModel searchClientByCodeDao(String code);
+    
+    public ArrayList<ClientModel> searchClientByNameDao(String name);
+    
+    //diferent List of Client
+    public ArrayList<ClientModel> listOfClientDao();
+    
+    public ArrayList<ClientModel> listOfActiveClientDao();
+    
+    public ArrayList<ClientModel> listOfNotActiveClientDao();
+    
+    public ArrayList<ClientModel> listOfSellClientDao();
     
 }
