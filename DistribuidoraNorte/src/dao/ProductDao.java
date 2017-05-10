@@ -7,11 +7,11 @@ public interface ProductDao {
     
     public void addProductDao(ProductModel product);
     
-    public void updateProducttDao(ProductModel product);
+    public void updateProductDao(ProductModel product);
     
     public void activeProductDao(ProductModel product);
     
-    public void deleteProductDao(ProductModel client);
+    public void deleteProductDao(ProductModel product);
     
     //search product
     public ProductModel searchProductByCodeDao(String code);
