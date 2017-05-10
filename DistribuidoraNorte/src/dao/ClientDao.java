@@ -26,6 +26,7 @@ public interface ClientDao {
     
     public ArrayList<ClientModel> listOfNotActiveClientDao();
     
-    public ArrayList<ClientModel> listOfSellClientDao();
+    //list all client by cantBought
+    public ArrayList<ClientModel> listOfClientByAmountBoughtDao();
     
 }

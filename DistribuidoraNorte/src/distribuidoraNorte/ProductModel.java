@@ -4,8 +4,9 @@ public class ProductModel {
 
     private String description;
     private String code;
-    // cant is stock of product
-    private Integer cant;
+    private Integer stock;
+    //is amount bought history
+    private Integer cantBought;
     // for default the product is active
     private Boolean isActive;
     //cost = how much do you buy it?
@@ -19,7 +20,8 @@ public class ProductModel {
     public ProductModel(){
         description = "";
         code = "";
-        cant = 0;
+        stock = 0;
+        cantBought = 0;
         isActive = true;
         cost = 0;
         price = 0;
@@ -30,7 +32,9 @@ public class ProductModel {
     public ProductModel(String descr,String cd, Integer cantP, float cst, float priceP, Area areaP, String nameProv){
         description = descr;
         code = cd;
-        cant = cantP;
+        stock = cantP;
+        //for defualt cantBought is 0
+        cantBought = 0;
         isActive = true;
         cost = cst;
         price = priceP;
@@ -47,8 +51,12 @@ public class ProductModel {
         code = cd;
     }
     
-    public void setCant (Integer cantP){
-        cant = cantP;
+    public void setStock (Integer stockP){
+        stock = stockP;
+    }
+    
+    public void setCantBought(Integer cantB){
+        cantBought = cantB;
     }
     
     public void setIsActive(Boolean isA){
@@ -71,17 +79,22 @@ public class ProductModel {
         nameProvider = nameProv;
     }
     
+    
     //gets
     public String getDescription (){
         return description;        
     }
     
-    public String getCode (){
+    public String getCode(){
         return code;        
     }
     
-    public Integer getCant (){
-        return cant;
+    public Integer getStock(){
+        return stock;
+    }
+    
+    public Integer getCantBought(){
+        return cantBought;
     }
     
     public Boolean getIsActive(){

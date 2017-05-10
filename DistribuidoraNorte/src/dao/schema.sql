@@ -7,7 +7,8 @@ CREATE TABLE client(
 	lastName VARCHAR(25),
 	address VARCHAR(25),
 	numAddress INT(10),
-	isActive INT(10)
+	isActive INT(10),
+        cantBought INT(10)
 )ENGINE = INNODB;
 
 
@@ -26,6 +27,7 @@ CREATE TABLE product(
 	code VARCHAR(25) NOT NULL PRIMARY KEY,
 	description VARCHAR(50),
 	stock INT(10),
+        cantBought INT(10),
 	isActive INT(10),
 	cost FLOAT,
 	price FLOAT,
@@ -91,9 +93,11 @@ CREATE TABLE sellProduct(
 -- When the user buy a product then update the product stock and if the price of product is change, update it
 CREATE TRIGGER fixProduct_AfterBuy AFTER INSERT ON buy
 	FOR EACH ROW
-	   UPDATE product SET cost = NEW.cost, stock = stock + NEW.cant;
+            UPDATE product SET cost = NEW.cost, stock = stock + NEW.cant, cantBought = cantBought + NEW.cant;
 
 -- When the user sell a product then update the product stock
 CREATE TRIGGER fixProduct_AfterSell AFTER INSERT ON sellProduct
-	FOR EACH ROW
+	FOR EACH ROW BEGIN
   	   UPDATE product SET stock = stock - NEW.cant;
+           UPDATE client SET cantBought = cantBought + NEW.cant;
+        END   

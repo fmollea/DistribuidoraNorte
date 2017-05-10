@@ -33,7 +33,7 @@ public interface ProductDao {
     public ArrayList<ProductModel> listOfNotActiveProductDao();
     
     //list of product by more seller
-    public ArrayList<ProductModel> listOfSellProductDao();
+    public ArrayList<ProductModel> listOfProductByAmountBoughtDao();
     
    
 }

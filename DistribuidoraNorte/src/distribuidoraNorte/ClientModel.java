@@ -12,7 +12,8 @@ public class ClientModel {
     private ArrayList<String> numPhone;
     // for default the client is active
     private Boolean isActive;
-    
+    //is amount bought history
+    private Integer cantBought;
     
     //constructors
     public ClientModel(){
@@ -23,7 +24,8 @@ public class ClientModel {
         numAddress = 0;
         numPhone = new ArrayList();
         numPhone.add("");
-        isActive = true;       
+        isActive = true;     
+        cantBought = 0;
     }
     
     public ClientModel(String codeP, String nameP, String lastN, String addressP, Integer numAddr, String numP){
@@ -35,6 +37,8 @@ public class ClientModel {
         numPhone = new ArrayList();
         numPhone.add(numP);
         isActive = true;
+        //for defualt cantBought is 0
+        cantBought = 0;
     }
     
     //sets
@@ -66,6 +70,9 @@ public class ClientModel {
         isActive = isActiveP;
     }
     
+    public void setCantBought(Integer cantB){
+        cantBought = cantB;
+    }
     //gets
     public String getCode(){
         return code;
@@ -92,5 +99,9 @@ public class ClientModel {
     
     public Boolean getIsActive(){
         return isActive;
+    }
+    
+    public Integer getCantBought(){
+        return cantBought;
     }
 }
