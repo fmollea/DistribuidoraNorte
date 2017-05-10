@@ -16,6 +16,7 @@ public class FrameMain extends javax.swing.JFrame {
      */
     public FrameMain() {
         initComponents();
+        //The frame is center
         this.setLocationRelativeTo(null);
     }
 
@@ -56,6 +57,11 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonClient.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonClient.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonClient.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonClient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonClientMouseClicked(evt);
+            }
+        });
         ButtonClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonClientActionPerformed(evt);
@@ -144,6 +150,12 @@ public class FrameMain extends javax.swing.JFrame {
     private void ButtonBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBuyActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonBuyActionPerformed
+    //create clientFrame
+    private void ButtonClientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonClientMouseClicked
+        FrameClient frameClient = new FrameClient();
+        frameClient.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButtonClientMouseClicked
 
     /**
      * @param args the command line arguments
