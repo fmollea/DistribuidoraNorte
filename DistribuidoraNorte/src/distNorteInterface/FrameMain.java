@@ -5,6 +5,8 @@
  */
 package distNorteInterface;
 
+import com.sun.glass.events.KeyEvent;
+
 /**
  *
  * @author fmollea
@@ -58,6 +60,9 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonClient.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonClient.setPreferredSize(new java.awt.Dimension(125, 125));
         ButtonClient.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ButtonClientMousePressed(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ButtonClientMouseClicked(evt);
             }
@@ -65,6 +70,11 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonClientActionPerformed(evt);
+            }
+        });
+        ButtonClient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ButtonClientKeyPressed(evt);
             }
         });
         getContentPane().add(ButtonClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
@@ -156,6 +166,18 @@ public class FrameMain extends javax.swing.JFrame {
         frameClient.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ButtonClientMouseClicked
+
+    private void ButtonClientMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonClientMousePressed
+        
+    }//GEN-LAST:event_ButtonClientMousePressed
+
+    private void ButtonClientKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonClientKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameClient frameClient = new FrameClient();
+            frameClient.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ButtonClientKeyPressed
 
     /**
      * @param args the command line arguments
