@@ -2,7 +2,7 @@ package distribuidoraNorte;
 
 import java.util.*;
 
-public class SellModel {
+public class InvoiceModel {
     
     private Integer number;
     private String clientCode;
@@ -10,7 +10,7 @@ public class SellModel {
     private float total;
     private ArrayList<Pair> listProduct;
     
-    public SellModel(){
+    public InvoiceModel(){
         number = 0;
         clientCode = "";
         date = null;
@@ -20,7 +20,7 @@ public class SellModel {
         listProduct.add(product);
     }
     
-    public SellModel(Integer num, String cCode, Date dt, float t, String pCode, Integer nCant){
+    public InvoiceModel(Integer num, String cCode, Date dt, float t, String pCode, Integer nCant){
         number = num;
         clientCode = cCode;
         date = dt;

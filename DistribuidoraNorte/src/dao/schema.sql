@@ -48,10 +48,10 @@ CREATE TABLE buy(
 	ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE = INNODB;
 
-CREATE TABLE sell(
-	numberSell INT NOT NULL PRIMARY KEY,
+CREATE TABLE invoice(
+	numberInvoice INT NOT NULL PRIMARY KEY,
 	clientCode VARCHAR(25) NOT NULL,
-	sellDate DATE,
+	invoiceDate DATE,
 	total FLOAT,
 	FOREIGN KEY (clientCode) REFERENCES client(code)
 	ON DELETE CASCADE ON UPDATE CASCADE
@@ -76,13 +76,13 @@ CREATE TABLE providerPhone(
 )ENGINE = INNODB;
 
 
--- sellProduct table is a list of products that was sold in sell table 
-CREATE TABLE sellProduct(
-	numberSell INT NOT NULL,
+-- invoiceProduct table is a list of products that was sold in invoice table 
+CREATE TABLE invoiceProduct(
+	numberInvoice INT NOT NULL,
 	codeProduct VARCHAR(25),
 	cant INT,
-	PRIMARY KEY (numberSell, codeProduct),
-	FOREIGN KEY (numberSell) REFERENCES sell(numberSell)
+	PRIMARY KEY (numberInvoice, codeProduct),
+	FOREIGN KEY (numberInvoice) REFERENCES invoice(numberInvoice)
 	ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (codeProduct) REFERENCES product(code)
 	ON DELETE CASCADE ON UPDATE CASCADE
@@ -95,8 +95,8 @@ CREATE TRIGGER fixProduct_AfterBuy AFTER INSERT ON buy
 	FOR EACH ROW
             UPDATE product SET cost = NEW.cost, stock = stock + NEW.cant, cantBought = cantBought + NEW.cant;
 
--- When the user sell a product then update the product stock
-CREATE TRIGGER fixProduct_AfterSell AFTER INSERT ON sellProduct
+-- When the user invoice a product then update the product stock
+CREATE TRIGGER fixProduct_AfterInvoice AFTER INSERT ON invoiceProduct
 	FOR EACH ROW BEGIN
   	   UPDATE product SET stock = stock - NEW.cant;
            UPDATE client SET cantBought = cantBought + NEW.cant;

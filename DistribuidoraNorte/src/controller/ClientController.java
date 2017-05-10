@@ -1,14 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
-/**
- *
- * @author fmollea
- */
 public class ClientController {
+    
+    protected static ClientController unique_instance = null;
+    
+    //constructor
+    
+    public static ClientController getInstance(){
+        if (unique_instance == null)
+            unique_instance = new ClientController();
+        return unique_instance;
+    }
+    
+    //methods
+    
+    public void addClient(){
+        
+    }
+    
+    public void updateClient(){
+        
+    }
     
 }

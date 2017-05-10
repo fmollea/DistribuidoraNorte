@@ -63,7 +63,7 @@ public class FrameMain extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
-        ButtonSell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/sell.jpg"))); // NOI18N
+        ButtonSell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/invoice.jpg"))); // NOI18N
         ButtonSell.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonSell.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonSell.setPreferredSize(new java.awt.Dimension(125, 125));
