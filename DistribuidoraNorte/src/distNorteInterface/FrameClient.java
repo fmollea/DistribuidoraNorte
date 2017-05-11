@@ -5,6 +5,8 @@
  */
 package distNorteInterface;
 
+import com.sun.glass.events.KeyEvent;
+
 /**
  *
  * @author fmollea
@@ -36,6 +38,7 @@ public class FrameClient extends javax.swing.JFrame {
         InvoiceButton = new javax.swing.JButton();
         fondHightLabel = new javax.swing.JLabel();
         LabelTittle = new javax.swing.JLabel();
+        ExitButtin = new javax.swing.JButton();
         fondLeftLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,18 +48,38 @@ public class FrameClient extends javax.swing.JFrame {
 
         ProviderButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider2.jpg"))); // NOI18N
         ProviderButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        ProviderButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProviderButtonMouseClicked(evt);
+            }
+        });
         ProviderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProviderButtonActionPerformed(evt);
+            }
+        });
+        ProviderButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ProviderButtonKeyPressed(evt);
             }
         });
         getContentPane().add(ProviderButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         ProductButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/product2.jpg"))); // NOI18N
         ProductButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        ProductButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProductButtonMouseClicked(evt);
+            }
+        });
         ProductButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProductButtonActionPerformed(evt);
+            }
+        });
+        ProductButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ProductButtonKeyPressed(evt);
             }
         });
         getContentPane().add(ProductButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
@@ -72,6 +95,11 @@ public class FrameClient extends javax.swing.JFrame {
         MainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MainButtonActionPerformed(evt);
+            }
+        });
+        MainButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                MainButtonKeyPressed(evt);
             }
         });
         getContentPane().add(MainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
@@ -114,6 +142,16 @@ public class FrameClient extends javax.swing.JFrame {
         LabelTittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 200, -1));
 
+        ExitButtin.setBackground(new java.awt.Color(102, 0, 0));
+        ExitButtin.setForeground(new java.awt.Color(204, 204, 204));
+        ExitButtin.setText("X");
+        ExitButtin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitButtinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ExitButtin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, -1, -1));
+
         fondLeftLabel.setBackground(new java.awt.Color(235, 235, 235));
         fondLeftLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
         getContentPane().add(fondLeftLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 80));
@@ -151,10 +189,51 @@ public class FrameClient extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_MainButtonMouseClicked
 
+    private void ExitButtinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtinActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitButtinActionPerformed
+
+    private void MainButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MainButtonKeyPressed
+       if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+           FrameMain main = new FrameMain();
+           main.setVisible(true);
+           this.setVisible(false);
+       }
+    }//GEN-LAST:event_MainButtonKeyPressed
+
+    private void ProviderButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProviderButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameProvider frameProvider = new FrameProvider();
+            frameProvider.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ProviderButtonKeyPressed
+
+    private void ProviderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProviderButtonMouseClicked
+        FrameProvider frameProvider = new FrameProvider();
+        frameProvider.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ProviderButtonMouseClicked
+
+    private void ProductButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButtonMouseClicked
+        FrameProduct frameProduct = new FrameProduct();
+        frameProduct.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ProductButtonMouseClicked
+
+    private void ProductButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProductButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameProduct frameProduct = new FrameProduct();
+            frameProduct.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ProductButtonKeyPressed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuyButton;
+    private javax.swing.JButton ExitButtin;
     private javax.swing.JButton InvoiceButton;
     private javax.swing.JLabel LabelTittle;
     private javax.swing.JButton MainButton;

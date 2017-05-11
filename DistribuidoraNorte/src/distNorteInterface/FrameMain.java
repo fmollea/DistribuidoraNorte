@@ -38,6 +38,7 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonProduct = new javax.swing.JButton();
         ButtonBuy = new javax.swing.JButton();
         LabelTittle = new javax.swing.JLabel();
+        ExitButtin = new javax.swing.JButton();
         LabelBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,9 +95,19 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonProvider.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonProvider.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonProvider.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonProvider.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonProviderMouseClicked(evt);
+            }
+        });
         ButtonProvider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonProviderActionPerformed(evt);
+            }
+        });
+        ButtonProvider.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ButtonProviderKeyPressed(evt);
             }
         });
         getContentPane().add(ButtonProvider, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
@@ -105,9 +116,19 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonProduct.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonProduct.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonProduct.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonProduct.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonProductMouseClicked(evt);
+            }
+        });
         ButtonProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonProductActionPerformed(evt);
+            }
+        });
+        ButtonProduct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ButtonProductKeyPressed(evt);
             }
         });
         getContentPane().add(ButtonProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, -1, -1));
@@ -129,6 +150,16 @@ public class FrameMain extends javax.swing.JFrame {
         LabelTittle.setText("Gestor de Negocios");
         LabelTittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 200, -1));
+
+        ExitButtin.setBackground(new java.awt.Color(102, 0, 0));
+        ExitButtin.setForeground(new java.awt.Color(204, 204, 204));
+        ExitButtin.setText("X");
+        ExitButtin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitButtinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ExitButtin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, -1, -1));
 
         LabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
         LabelBackground.setText("jLabel1");
@@ -179,6 +210,38 @@ public class FrameMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonClientKeyPressed
 
+    private void ExitButtinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtinActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitButtinActionPerformed
+
+    private void ButtonProviderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonProviderMouseClicked
+        FrameProvider frameProvider = new FrameProvider();
+        frameProvider.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButtonProviderMouseClicked
+
+    private void ButtonProviderKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonProviderKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameProvider frameProvider = new FrameProvider();
+            frameProvider.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ButtonProviderKeyPressed
+
+    private void ButtonProductMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonProductMouseClicked
+        FrameProduct frameProduct = new FrameProduct();
+        frameProduct.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButtonProductMouseClicked
+
+    private void ButtonProductKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonProductKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameProduct frameProduct = new FrameProduct();
+            frameProduct.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ButtonProductKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -221,6 +284,7 @@ public class FrameMain extends javax.swing.JFrame {
     private javax.swing.JButton ButtonProvider;
     private javax.swing.JButton ButtonSearch;
     private javax.swing.JButton ButtonSell;
+    private javax.swing.JButton ExitButtin;
     private javax.swing.JLabel LabelBackground;
     private javax.swing.JLabel LabelTittle;
     // End of variables declaration//GEN-END:variables
