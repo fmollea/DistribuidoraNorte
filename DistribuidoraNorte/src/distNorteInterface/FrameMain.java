@@ -33,7 +33,7 @@ public class FrameMain extends javax.swing.JFrame {
 
         ButtonSearch = new javax.swing.JButton();
         ButtonClient = new javax.swing.JButton();
-        ButtonSell = new javax.swing.JButton();
+        ButtonInvoice = new javax.swing.JButton();
         ButtonProvider = new javax.swing.JButton();
         ButtonProduct = new javax.swing.JButton();
         ButtonBuy = new javax.swing.JButton();
@@ -49,9 +49,19 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonSearch.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonSearch.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonSearch.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonSearchMouseClicked(evt);
+            }
+        });
         ButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonSearchActionPerformed(evt);
+            }
+        });
+        ButtonSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ButtonSearchKeyPressed(evt);
             }
         });
         getContentPane().add(ButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
@@ -80,16 +90,26 @@ public class FrameMain extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
-        ButtonSell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/invoice.jpg"))); // NOI18N
-        ButtonSell.setMaximumSize(new java.awt.Dimension(290, 266));
-        ButtonSell.setMinimumSize(new java.awt.Dimension(290, 266));
-        ButtonSell.setPreferredSize(new java.awt.Dimension(125, 125));
-        ButtonSell.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonSellActionPerformed(evt);
+        ButtonInvoice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/invoice.jpg"))); // NOI18N
+        ButtonInvoice.setMaximumSize(new java.awt.Dimension(290, 266));
+        ButtonInvoice.setMinimumSize(new java.awt.Dimension(290, 266));
+        ButtonInvoice.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonInvoice.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonInvoiceMouseClicked(evt);
             }
         });
-        getContentPane().add(ButtonSell, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        ButtonInvoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonInvoiceActionPerformed(evt);
+            }
+        });
+        ButtonInvoice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ButtonInvoiceKeyPressed(evt);
+            }
+        });
+        getContentPane().add(ButtonInvoice, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         ButtonProvider.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider.jpg"))); // NOI18N
         ButtonProvider.setMaximumSize(new java.awt.Dimension(290, 266));
@@ -137,9 +157,19 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonBuy.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonBuy.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonBuy.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonBuy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonBuyMouseClicked(evt);
+            }
+        });
         ButtonBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonBuyActionPerformed(evt);
+            }
+        });
+        ButtonBuy.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ButtonBuyKeyPressed(evt);
             }
         });
         getContentPane().add(ButtonBuy, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
@@ -176,9 +206,9 @@ public class FrameMain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonClientActionPerformed
 
-    private void ButtonSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSellActionPerformed
+    private void ButtonInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonInvoiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonSellActionPerformed
+    }//GEN-LAST:event_ButtonInvoiceActionPerformed
 
     private void ButtonProviderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonProviderActionPerformed
         // TODO add your handling code here:
@@ -242,6 +272,48 @@ public class FrameMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ButtonProductKeyPressed
 
+    private void ButtonInvoiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonInvoiceMouseClicked
+        FrameInvoice frameInvoice = new FrameInvoice();
+        frameInvoice.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButtonInvoiceMouseClicked
+
+    private void ButtonInvoiceKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonInvoiceKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
+            FrameInvoice frameInvoice = new FrameInvoice();
+            frameInvoice.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ButtonInvoiceKeyPressed
+
+    private void ButtonBuyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBuyMouseClicked
+        FrameBuy frameBuy = new FrameBuy();
+        frameBuy.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButtonBuyMouseClicked
+
+    private void ButtonBuyKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonBuyKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
+            FrameBuy frameBuy = new FrameBuy();
+            frameBuy.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ButtonBuyKeyPressed
+
+    private void ButtonSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSearchMouseClicked
+        FrameSearch frameSearch = new FrameSearch();
+        frameSearch.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButtonSearchMouseClicked
+
+    private void ButtonSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonSearchKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){      
+            FrameSearch frameSearch = new FrameSearch();
+            frameSearch.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_ButtonSearchKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -280,10 +352,10 @@ public class FrameMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonBuy;
     private javax.swing.JButton ButtonClient;
+    private javax.swing.JButton ButtonInvoice;
     private javax.swing.JButton ButtonProduct;
     private javax.swing.JButton ButtonProvider;
     private javax.swing.JButton ButtonSearch;
-    private javax.swing.JButton ButtonSell;
     private javax.swing.JButton ExitButtin;
     private javax.swing.JLabel LabelBackground;
     private javax.swing.JLabel LabelTittle;
