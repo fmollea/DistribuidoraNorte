@@ -16,6 +16,7 @@ public class FrameInvoice extends javax.swing.JFrame {
      */
     public FrameInvoice() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,21 +28,80 @@ public class FrameInvoice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        LabelTittle = new javax.swing.JLabel();
+        mainButton = new javax.swing.JButton();
+        ExitButtin = new javax.swing.JButton();
+        clientButton = new javax.swing.JButton();
+        providerButton = new javax.swing.JButton();
+        produtButton = new javax.swing.JButton();
+        buyButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
+        fondLeftLabel = new javax.swing.JLabel();
+        fondHightLabel = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(760, 675));
+        setMinimumSize(new java.awt.Dimension(760, 675));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(760, 675));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelTittle.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        LabelTittle.setForeground(new java.awt.Color(255, 255, 255));
+        LabelTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelTittle.setText("Ventas");
+        LabelTittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LabelTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 200, -1));
+
+        mainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/main.jpg"))); // NOI18N
+        mainButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(mainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        ExitButtin.setBackground(new java.awt.Color(102, 0, 0));
+        ExitButtin.setForeground(new java.awt.Color(204, 204, 204));
+        ExitButtin.setText("X");
+        ExitButtin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitButtinActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ExitButtin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, -1, -1));
+
+        clientButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/client2.jpg"))); // NOI18N
+        clientButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(clientButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+
+        providerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider2.jpg"))); // NOI18N
+        providerButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(providerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        produtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/product2.jpg"))); // NOI18N
+        produtButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(produtButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
+
+        buyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/buy2.jpg"))); // NOI18N
+        buyButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(buyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
+
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/search2.jpg"))); // NOI18N
+        searchButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        getContentPane().add(searchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, -1));
+
+        fondLeftLabel.setBackground(new java.awt.Color(235, 235, 235));
+        fondLeftLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
+        fondLeftLabel.setText("Ventas");
+        getContentPane().add(fondLeftLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 80));
+
+        fondHightLabel.setBackground(new java.awt.Color(235, 235, 235));
+        fondHightLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
+        getContentPane().add(fondHightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 675));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ExitButtinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtinActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitButtinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +139,16 @@ public class FrameInvoice extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ExitButtin;
+    private javax.swing.JButton ExitButtin1;
+    private javax.swing.JLabel LabelTittle;
+    private javax.swing.JButton buyButton;
+    private javax.swing.JButton clientButton;
+    private javax.swing.JLabel fondHightLabel;
+    private javax.swing.JLabel fondLeftLabel;
+    private javax.swing.JButton mainButton;
+    private javax.swing.JButton produtButton;
+    private javax.swing.JButton providerButton;
+    private javax.swing.JButton searchButton;
     // End of variables declaration//GEN-END:variables
 }

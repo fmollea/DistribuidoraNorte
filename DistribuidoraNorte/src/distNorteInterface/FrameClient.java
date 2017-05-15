@@ -42,8 +42,9 @@ public class FrameClient extends javax.swing.JFrame {
         fondLeftLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(730, 700));
+        setMinimumSize(new java.awt.Dimension(760, 675));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(760, 675));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ProviderButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider2.jpg"))); // NOI18N
@@ -163,7 +164,7 @@ public class FrameClient extends javax.swing.JFrame {
 
         fondHightLabel.setBackground(new java.awt.Color(235, 235, 235));
         fondHightLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
-        getContentPane().add(fondHightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 680));
+        getContentPane().add(fondHightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 675));
 
         LabelTittle.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         LabelTittle.setForeground(new java.awt.Color(255, 255, 255));
