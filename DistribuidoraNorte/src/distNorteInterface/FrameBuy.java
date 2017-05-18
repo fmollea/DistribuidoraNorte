@@ -5,6 +5,8 @@
  */
 package distNorteInterface;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author fmollea
@@ -43,7 +45,6 @@ public class FrameBuy extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(760, 675));
         setMinimumSize(new java.awt.Dimension(760, 675));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(760, 675));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LabelTittle.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
@@ -65,26 +66,86 @@ public class FrameBuy extends javax.swing.JFrame {
 
         mainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/main.jpg"))); // NOI18N
         mainButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        mainButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mainButtonMouseClicked(evt);
+            }
+        });
+        mainButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                mainButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(mainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         clientButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/client2.jpg"))); // NOI18N
         clientButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        clientButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clientButtonMouseClicked(evt);
+            }
+        });
+        clientButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                clientButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(clientButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         providerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider2.jpg"))); // NOI18N
         providerButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        providerButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                providerButtonMouseClicked(evt);
+            }
+        });
+        providerButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                providerButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(providerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
         produtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/product2.jpg"))); // NOI18N
         produtButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        produtButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                produtButtonMouseClicked(evt);
+            }
+        });
+        produtButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                produtButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(produtButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
         InvoiceButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/invoice2.jpg"))); // NOI18N
         InvoiceButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        InvoiceButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InvoiceButtonMouseClicked(evt);
+            }
+        });
+        InvoiceButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                InvoiceButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(InvoiceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
 
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/search2.jpg"))); // NOI18N
         searchButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchButtonMouseClicked(evt);
+            }
+        });
+        searchButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(searchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, -1));
 
         fondHightLabel.setBackground(new java.awt.Color(235, 235, 235));
@@ -102,6 +163,90 @@ public class FrameBuy extends javax.swing.JFrame {
     private void ExitButtin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtin2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_ExitButtin2ActionPerformed
+
+    private void mainButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mainButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+           FrameMain main = new FrameMain();
+           main.setVisible(true);
+           this.setVisible(false);
+       }
+    }//GEN-LAST:event_mainButtonKeyPressed
+
+    private void mainButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainButtonMouseClicked
+        FrameMain main = new FrameMain();
+        main.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mainButtonMouseClicked
+
+    private void clientButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+           FrameClient client = new FrameClient();
+           client.setVisible(true);
+           this.setVisible(false);
+       }
+    }//GEN-LAST:event_clientButtonKeyPressed
+
+    private void clientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientButtonMouseClicked
+        FrameClient client = new FrameClient();
+        client.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_clientButtonMouseClicked
+
+    private void providerButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_providerButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameProvider frameProvider = new FrameProvider();
+            frameProvider.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_providerButtonKeyPressed
+
+    private void providerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_providerButtonMouseClicked
+        FrameProvider frameProvider = new FrameProvider();
+        frameProvider.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_providerButtonMouseClicked
+
+    private void produtButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_produtButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameProduct frameProduct = new FrameProduct();
+            frameProduct.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_produtButtonKeyPressed
+
+    private void produtButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produtButtonMouseClicked
+        FrameProduct frameProduct = new FrameProduct();
+        frameProduct.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_produtButtonMouseClicked
+
+    private void InvoiceButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InvoiceButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
+            FrameInvoice frameInvoice = new FrameInvoice();
+            frameInvoice.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_InvoiceButtonKeyPressed
+
+    private void InvoiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseClicked
+        FrameInvoice frameInvoice = new FrameInvoice();
+        frameInvoice.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_InvoiceButtonMouseClicked
+
+    private void searchButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){      
+            FrameSearch frameSearch = new FrameSearch();
+            frameSearch.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_searchButtonKeyPressed
+
+    private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
+        FrameSearch frameSearch = new FrameSearch();
+        frameSearch.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_searchButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -139,8 +284,6 @@ public class FrameBuy extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ExitButtin;
-    private javax.swing.JButton ExitButtin1;
     private javax.swing.JButton ExitButtin2;
     private javax.swing.JButton InvoiceButton;
     private javax.swing.JLabel LabelTittle;
