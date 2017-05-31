@@ -225,7 +225,7 @@ public class FrameMain extends javax.swing.JFrame {
     private void ButtonClientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonClientMouseClicked
         FrameClient frameClient = new FrameClient();
         frameClient.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ButtonClientMouseClicked
 
     private void ButtonClientMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonClientMousePressed
@@ -236,7 +236,7 @@ public class FrameMain extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameClient frameClient = new FrameClient();
             frameClient.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ButtonClientKeyPressed
 
@@ -247,70 +247,70 @@ public class FrameMain extends javax.swing.JFrame {
     private void ButtonProviderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonProviderMouseClicked
         FrameProvider frameProvider = new FrameProvider();
         frameProvider.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ButtonProviderMouseClicked
 
     private void ButtonProviderKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonProviderKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProvider frameProvider = new FrameProvider();
             frameProvider.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ButtonProviderKeyPressed
 
     private void ButtonProductMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonProductMouseClicked
         FrameProduct frameProduct = new FrameProduct();
         frameProduct.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ButtonProductMouseClicked
 
     private void ButtonProductKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonProductKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProduct frameProduct = new FrameProduct();
             frameProduct.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ButtonProductKeyPressed
 
     private void ButtonInvoiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonInvoiceMouseClicked
         FrameInvoice frameInvoice = new FrameInvoice();
         frameInvoice.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ButtonInvoiceMouseClicked
 
     private void ButtonInvoiceKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonInvoiceKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameInvoice frameInvoice = new FrameInvoice();
             frameInvoice.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ButtonInvoiceKeyPressed
 
     private void ButtonBuyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBuyMouseClicked
         FrameBuy frameBuy = new FrameBuy();
         frameBuy.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ButtonBuyMouseClicked
 
     private void ButtonBuyKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonBuyKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameBuy frameBuy = new FrameBuy();
             frameBuy.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ButtonBuyKeyPressed
 
     private void ButtonSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSearchMouseClicked
         FrameSearch frameSearch = new FrameSearch();
         frameSearch.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ButtonSearchMouseClicked
 
     private void ButtonSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ButtonSearchKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){      
             FrameSearch frameSearch = new FrameSearch();
             frameSearch.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ButtonSearchKeyPressed
 

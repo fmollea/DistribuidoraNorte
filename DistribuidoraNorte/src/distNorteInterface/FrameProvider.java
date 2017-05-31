@@ -166,84 +166,84 @@ public class FrameProvider extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameMain main = new FrameMain();
            main.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_mainButtonKeyPressed
 
     private void mainButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainButtonMouseClicked
         FrameMain main = new FrameMain();
         main.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_mainButtonMouseClicked
 
     private void clientButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameClient client = new FrameClient();
            client.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_clientButtonKeyPressed
 
     private void clientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientButtonMouseClicked
         FrameClient clien = new FrameClient();
         clien.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_clientButtonMouseClicked
 
     private void productButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_productButtonKeyPressed
          if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProduct frameProduct = new FrameProduct();
             frameProduct.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_productButtonKeyPressed
 
     private void productButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productButtonMouseClicked
         FrameProduct frameProduct = new FrameProduct();
         frameProduct.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_productButtonMouseClicked
 
     private void invoicetButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_invoicetButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameInvoice frameInvoice = new FrameInvoice();
             frameInvoice.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_invoicetButtonKeyPressed
 
     private void invoicetButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_invoicetButtonMouseClicked
         FrameInvoice frameInvoice = new FrameInvoice();
         frameInvoice.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_invoicetButtonMouseClicked
 
     private void buyButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_buyButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameBuy frameBuy = new FrameBuy();
             frameBuy.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_buyButtonKeyPressed
 
     private void buyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyButtonMouseClicked
         FrameBuy frameBuy = new FrameBuy();
         frameBuy.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_buyButtonMouseClicked
 
     private void searchButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){      
             FrameSearch frameSearch = new FrameSearch();
             frameSearch.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_searchButtonKeyPressed
 
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
         FrameSearch frameSearch = new FrameSearch();
         frameSearch.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_searchButtonMouseClicked
 
     /**

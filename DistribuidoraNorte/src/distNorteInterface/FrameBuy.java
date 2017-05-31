@@ -168,84 +168,84 @@ public class FrameBuy extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameMain main = new FrameMain();
            main.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_mainButtonKeyPressed
 
     private void mainButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainButtonMouseClicked
         FrameMain main = new FrameMain();
         main.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_mainButtonMouseClicked
 
     private void clientButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameClient client = new FrameClient();
            client.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_clientButtonKeyPressed
 
     private void clientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientButtonMouseClicked
         FrameClient client = new FrameClient();
         client.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_clientButtonMouseClicked
 
     private void providerButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_providerButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProvider frameProvider = new FrameProvider();
             frameProvider.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_providerButtonKeyPressed
 
     private void providerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_providerButtonMouseClicked
         FrameProvider frameProvider = new FrameProvider();
         frameProvider.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_providerButtonMouseClicked
 
     private void produtButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_produtButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProduct frameProduct = new FrameProduct();
             frameProduct.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_produtButtonKeyPressed
 
     private void produtButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produtButtonMouseClicked
         FrameProduct frameProduct = new FrameProduct();
         frameProduct.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_produtButtonMouseClicked
 
     private void InvoiceButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InvoiceButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameInvoice frameInvoice = new FrameInvoice();
             frameInvoice.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_InvoiceButtonKeyPressed
 
     private void InvoiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseClicked
         FrameInvoice frameInvoice = new FrameInvoice();
         frameInvoice.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_InvoiceButtonMouseClicked
 
     private void searchButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){      
             FrameSearch frameSearch = new FrameSearch();
             frameSearch.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_searchButtonKeyPressed
 
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
         FrameSearch frameSearch = new FrameSearch();
         frameSearch.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_searchButtonMouseClicked
 
     /**

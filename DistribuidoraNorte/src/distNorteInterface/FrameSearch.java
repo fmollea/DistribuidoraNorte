@@ -125,9 +125,7 @@ public class FrameSearch extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 InvoiceButtonMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                InvoiceButtonMouseEntered(evt);
-            }
+            
         });
         InvoiceButton.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -170,88 +168,84 @@ public class FrameSearch extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameMain main = new FrameMain();
            main.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_mainButtonKeyPressed
 
     private void mainButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainButtonMouseClicked
         FrameMain main = new FrameMain();
         main.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_mainButtonMouseClicked
 
     private void clientButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clientButtonKeyPressed
          if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameClient client = new FrameClient();
            client.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_clientButtonKeyPressed
 
     private void clientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientButtonMouseClicked
         FrameClient clien = new FrameClient();
         clien.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_clientButtonMouseClicked
 
     private void providerButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_providerButtonKeyPressed
          if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProvider frameProvider = new FrameProvider();
             frameProvider.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_providerButtonKeyPressed
 
     private void providerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_providerButtonMouseClicked
         FrameProvider frameProvider = new FrameProvider();
         frameProvider.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_providerButtonMouseClicked
 
     private void produtButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_produtButtonKeyPressed
          if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProduct frameProduct = new FrameProduct();
             frameProduct.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_produtButtonKeyPressed
 
     private void produtButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produtButtonMouseClicked
         FrameProduct frameProduct = new FrameProduct();
         frameProduct.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_produtButtonMouseClicked
 
     private void InvoiceButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InvoiceButtonKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameInvoice frameInvoice = new FrameInvoice();
             frameInvoice.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_InvoiceButtonKeyPressed
-
-    private void InvoiceButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseEntered
-        
-    }//GEN-LAST:event_InvoiceButtonMouseEntered
 
     private void InvoiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseClicked
         FrameInvoice frameInvoice = new FrameInvoice();
         frameInvoice.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_InvoiceButtonMouseClicked
 
     private void buyButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_buyButtonKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameBuy frameBuy = new FrameBuy();
             frameBuy.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_buyButtonKeyPressed
 
     private void buyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyButtonMouseClicked
         FrameBuy frameBuy = new FrameBuy();
         frameBuy.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_buyButtonMouseClicked
 
     /**
@@ -261,7 +255,7 @@ public class FrameSearch extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

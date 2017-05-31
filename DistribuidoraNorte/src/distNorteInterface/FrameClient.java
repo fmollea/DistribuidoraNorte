@@ -30,6 +30,11 @@ public class FrameClient extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        createButton1 = new javax.swing.JButton();
+        updateButton1 = new javax.swing.JButton();
+        listButton1 = new javax.swing.JButton();
+        dropButton1 = new javax.swing.JButton();
+        listButton = new javax.swing.JButton();
         ProviderButton = new javax.swing.JButton();
         ProductButton = new javax.swing.JButton();
         MainButton = new javax.swing.JButton();
@@ -40,11 +45,50 @@ public class FrameClient extends javax.swing.JFrame {
         LabelTittle = new javax.swing.JLabel();
         ExitButtin = new javax.swing.JButton();
         fondLeftLabel = new javax.swing.JLabel();
+        sButton = new javax.swing.JButton();
+        addButton = new javax.swing.JButton();
+        updateButton = new javax.swing.JButton();
+        lButton = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
+
+        createButton1.setText("Cargar");
+        createButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createButton1ActionPerformed(evt);
+            }
+        });
+
+        updateButton1.setText("Modificar");
+        updateButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButton1ActionPerformed(evt);
+            }
+        });
+
+        listButton1.setText("Listar");
+        listButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listButton1ActionPerformed(evt);
+            }
+        });
+
+        dropButton1.setText("Eliminar");
+        dropButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dropButton1ActionPerformed(evt);
+            }
+        });
+
+        listButton.setText("Buscar");
+        listButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listButtonActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(760, 675));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(760, 675));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ProviderButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/provider2.jpg"))); // NOI18N
@@ -187,6 +231,31 @@ public class FrameClient extends javax.swing.JFrame {
         fondLeftLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
         getContentPane().add(fondLeftLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 80));
 
+        sButton.setText("Buscar");
+        getContentPane().add(sButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(628, 80, 128, 50));
+
+        addButton.setText("Crear");
+        getContentPane().add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 128, 50));
+
+        updateButton.setText("Modificar");
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 80, 128, 50));
+
+        lButton.setText("Listar");
+        getContentPane().add(lButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 128, 50));
+
+        deleteButton.setText("Eliminar");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 80, 128, 50));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -217,7 +286,7 @@ public class FrameClient extends javax.swing.JFrame {
     private void MainButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MainButtonMouseClicked
         FrameMain main = new FrameMain();
         main.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_MainButtonMouseClicked
 
     private void ExitButtinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtinActionPerformed
@@ -228,7 +297,7 @@ public class FrameClient extends javax.swing.JFrame {
        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
            FrameMain main = new FrameMain();
            main.setVisible(true);
-           this.setVisible(false);
+           dispose();
        }
     }//GEN-LAST:event_MainButtonKeyPressed
 
@@ -236,71 +305,99 @@ public class FrameClient extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProvider frameProvider = new FrameProvider();
             frameProvider.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ProviderButtonKeyPressed
 
     private void ProviderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProviderButtonMouseClicked
         FrameProvider frameProvider = new FrameProvider();
         frameProvider.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ProviderButtonMouseClicked
 
     private void ProductButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProductButtonMouseClicked
         FrameProduct frameProduct = new FrameProduct();
         frameProduct.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_ProductButtonMouseClicked
 
     private void ProductButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProductButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameProduct frameProduct = new FrameProduct();
             frameProduct.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_ProductButtonKeyPressed
 
     private void InvoiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseClicked
         FrameInvoice frameInvoice = new FrameInvoice();
         frameInvoice.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_InvoiceButtonMouseClicked
 
     private void InvoiceButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InvoiceButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameInvoice frameInvoice = new FrameInvoice();
             frameInvoice.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_InvoiceButtonKeyPressed
 
     private void BuyButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuyButtonMouseClicked
         FrameBuy frameBuy = new FrameBuy();
         frameBuy.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_BuyButtonMouseClicked
 
     private void BuyButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BuyButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){    
             FrameBuy frameBuy = new FrameBuy();
             frameBuy.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_BuyButtonKeyPressed
 
     private void SearchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SearchButtonMouseClicked
         FrameSearch frameSearch = new FrameSearch();
         frameSearch.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_SearchButtonMouseClicked
 
     private void SearchButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){      
             FrameSearch frameSearch = new FrameSearch();
             frameSearch.setVisible(true);
-            this.setVisible(false);
+            dispose();
         }
     }//GEN-LAST:event_SearchButtonKeyPressed
+
+    private void listButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listButtonActionPerformed
+
+    private void createButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createButton1ActionPerformed
+
+    private void updateButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateButton1ActionPerformed
+
+    private void dropButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dropButton1ActionPerformed
+
+    private void listButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_listButton1ActionPerformed
+
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_updateButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
    
 
@@ -313,7 +410,17 @@ public class FrameClient extends javax.swing.JFrame {
     private javax.swing.JButton ProductButton;
     private javax.swing.JButton ProviderButton;
     private javax.swing.JButton SearchButton;
+    private javax.swing.JButton addButton;
+    private javax.swing.JButton createButton1;
+    private javax.swing.JButton deleteButton;
+    private javax.swing.JButton dropButton1;
     private javax.swing.JLabel fondHightLabel;
     private javax.swing.JLabel fondLeftLabel;
+    private javax.swing.JButton lButton;
+    private javax.swing.JButton listButton;
+    private javax.swing.JButton listButton1;
+    private javax.swing.JButton sButton;
+    private javax.swing.JButton updateButton;
+    private javax.swing.JButton updateButton1;
     // End of variables declaration//GEN-END:variables
 }
