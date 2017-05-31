@@ -6,6 +6,8 @@
 package distNorteInterface;
 
 import com.sun.glass.events.KeyEvent;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,6 +20,8 @@ public class FrameMain extends javax.swing.JFrame {
      */
     public FrameMain() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         //The frame is center
         this.setLocationRelativeTo(null);
     }
@@ -42,6 +46,7 @@ public class FrameMain extends javax.swing.JFrame {
         LabelBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Home");
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
