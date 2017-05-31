@@ -5,7 +5,9 @@
  */
 package distNorteInterface;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
+import javax.swing.*;
 
 /**
  *
@@ -18,6 +20,8 @@ public class FrameBuy extends javax.swing.JFrame {
      */
     public FrameBuy() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -40,8 +44,10 @@ public class FrameBuy extends javax.swing.JFrame {
         searchButton = new javax.swing.JButton();
         fondHightLabel = new javax.swing.JLabel();
         fondLeftLabel = new javax.swing.JLabel();
+        labelIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Compras\n");
         setMaximumSize(new java.awt.Dimension(760, 675));
         setMinimumSize(new java.awt.Dimension(760, 675));
         setUndecorated(true);
@@ -156,6 +162,9 @@ public class FrameBuy extends javax.swing.JFrame {
         fondLeftLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
         fondLeftLabel.setText("Ventas");
         getContentPane().add(fondLeftLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 80));
+
+        labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/logoDN.jpg"))); // NOI18N
+        getContentPane().add(labelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -290,6 +299,7 @@ public class FrameBuy extends javax.swing.JFrame {
     private javax.swing.JButton clientButton;
     private javax.swing.JLabel fondHightLabel;
     private javax.swing.JLabel fondLeftLabel;
+    private javax.swing.JLabel labelIcon;
     private javax.swing.JButton mainButton;
     private javax.swing.JButton produtButton;
     private javax.swing.JButton providerButton;
