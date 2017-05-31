@@ -6,6 +6,8 @@
 package distNorteInterface;
 
 import com.sun.glass.events.KeyEvent;
+import java.awt.*;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,6 +20,8 @@ public class FrameClient extends javax.swing.JFrame {
      */
     public FrameClient() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -50,6 +54,7 @@ public class FrameClient extends javax.swing.JFrame {
         updateButton = new javax.swing.JButton();
         lButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
+        labelIcon = new javax.swing.JLabel();
 
         createButton1.setText("Cargar");
         createButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -87,6 +92,10 @@ public class FrameClient extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Clientes\n");
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setIconImages(null);
         setMinimumSize(new java.awt.Dimension(760, 675));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -256,6 +265,9 @@ public class FrameClient extends javax.swing.JFrame {
         });
         getContentPane().add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 80, 128, 50));
 
+        labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/logoDN.jpg"))); // NOI18N
+        getContentPane().add(labelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -417,6 +429,7 @@ public class FrameClient extends javax.swing.JFrame {
     private javax.swing.JLabel fondHightLabel;
     private javax.swing.JLabel fondLeftLabel;
     private javax.swing.JButton lButton;
+    private javax.swing.JLabel labelIcon;
     private javax.swing.JButton listButton;
     private javax.swing.JButton listButton1;
     private javax.swing.JButton sButton;
