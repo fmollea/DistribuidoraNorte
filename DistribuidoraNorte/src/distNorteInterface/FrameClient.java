@@ -6,8 +6,10 @@
 package distNorteInterface;
 
 import com.sun.glass.events.KeyEvent;
-import java.awt.*;
-import javax.swing.ImageIcon;
+import distNorteInterface.clientPanels.PanelAddClient;
+import java.awt.*;  
+import javax.swing.*;
+
 
 /**
  *
@@ -15,15 +17,18 @@ import javax.swing.ImageIcon;
  */
 public class FrameClient extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrameClient
-     */
+    
     public FrameClient() {
         initComponents();
+        initPanels();
         this.getContentPane().setBackground(Color.white);
         setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         this.setLocationRelativeTo(null);
     }
+    
+    public void initPanels(){
+        panelAddClient = new PanelAddClient();
+        getContentPane().add(panelAddClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -244,6 +249,11 @@ public class FrameClient extends javax.swing.JFrame {
         getContentPane().add(sButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(628, 80, 128, 50));
 
         addButton.setText("Crear");
+        addButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addButtonMouseClicked(evt);
+            }
+        });
         getContentPane().add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 128, 50));
 
         updateButton.setText("Modificar");
@@ -411,8 +421,14 @@ public class FrameClient extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteButtonActionPerformed
 
-   
+    private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
+          panelAddClient.setVisible(true);
+          labelIcon.setVisible(false);
+          
+    }//GEN-LAST:event_addButtonMouseClicked
 
+   
+    private PanelAddClient panelAddClient;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuyButton;
     private javax.swing.JButton ExitButtin;
