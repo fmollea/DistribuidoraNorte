@@ -5,7 +5,9 @@
  */
 package distNorteInterface;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,6 +20,8 @@ public class FrameProduct extends javax.swing.JFrame {
      */
     public FrameProduct() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -40,8 +44,10 @@ public class FrameProduct extends javax.swing.JFrame {
         searchButton = new javax.swing.JButton();
         fondHightLabel = new javax.swing.JLabel();
         ExitButtin = new javax.swing.JButton();
+        labelIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Productos");
         setMinimumSize(new java.awt.Dimension(760, 675));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -154,6 +160,9 @@ public class FrameProduct extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ExitButtin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, -1, -1));
+
+        labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/logoDN.jpg"))); // NOI18N
+        getContentPane().add(labelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -289,6 +298,7 @@ public class FrameProduct extends javax.swing.JFrame {
     private javax.swing.JLabel fondHightLabel;
     private javax.swing.JLabel fondLeftLabel;
     private javax.swing.JButton invoicetButton;
+    private javax.swing.JLabel labelIcon;
     private javax.swing.JButton mainButton;
     private javax.swing.JButton providerButton;
     private javax.swing.JButton searchButton;
