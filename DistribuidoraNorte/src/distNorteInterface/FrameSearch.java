@@ -5,8 +5,11 @@
  */
 package distNorteInterface;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import java.util.Locale;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,6 +22,8 @@ public class FrameSearch extends javax.swing.JFrame {
      */
     public FrameSearch() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -41,8 +46,10 @@ public class FrameSearch extends javax.swing.JFrame {
         buyButton = new javax.swing.JButton();
         fondLeftLabel = new javax.swing.JLabel();
         fondHightLabel = new javax.swing.JLabel();
+        labelIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Busquedas");
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -125,7 +132,14 @@ public class FrameSearch extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 InvoiceButtonMouseClicked(evt);
             }
-            
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                InvoiceButtonMouseEntered(evt);
+            }
+        });
+        InvoiceButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InvoiceButtonActionPerformed(evt);
+            }
         });
         InvoiceButton.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -156,6 +170,9 @@ public class FrameSearch extends javax.swing.JFrame {
         fondHightLabel.setBackground(new java.awt.Color(235, 235, 235));
         fondHightLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
         getContentPane().add(fondHightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 675));
+
+        labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/logoDN.jpg"))); // NOI18N
+        getContentPane().add(labelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -220,20 +237,6 @@ public class FrameSearch extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_produtButtonMouseClicked
 
-    private void InvoiceButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InvoiceButtonKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
-            FrameInvoice frameInvoice = new FrameInvoice();
-            frameInvoice.setVisible(true);
-            dispose();
-        }
-    }//GEN-LAST:event_InvoiceButtonKeyPressed
-
-    private void InvoiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseClicked
-        FrameInvoice frameInvoice = new FrameInvoice();
-        frameInvoice.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_InvoiceButtonMouseClicked
-
     private void buyButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_buyButtonKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             FrameBuy frameBuy = new FrameBuy();
@@ -247,6 +250,28 @@ public class FrameSearch extends javax.swing.JFrame {
         frameBuy.setVisible(true);
         dispose();
     }//GEN-LAST:event_buyButtonMouseClicked
+
+    private void InvoiceButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InvoiceButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            FrameInvoice frameInvoice = new FrameInvoice();
+            frameInvoice.setVisible(true);
+            dispose();
+        }
+    }//GEN-LAST:event_InvoiceButtonKeyPressed
+
+    private void InvoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvoiceButtonActionPerformed
+
+    }//GEN-LAST:event_InvoiceButtonActionPerformed
+
+    private void InvoiceButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InvoiceButtonMouseEntered
+
+    private void InvoiceButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InvoiceButtonMouseClicked
+        FrameInvoice frameInvoice = new FrameInvoice();
+        frameInvoice.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_InvoiceButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -291,6 +316,7 @@ public class FrameSearch extends javax.swing.JFrame {
     private javax.swing.JButton clientButton;
     private javax.swing.JLabel fondHightLabel;
     private javax.swing.JLabel fondLeftLabel;
+    private javax.swing.JLabel labelIcon;
     private javax.swing.JButton mainButton;
     private javax.swing.JButton produtButton;
     private javax.swing.JButton providerButton;
