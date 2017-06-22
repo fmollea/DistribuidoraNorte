@@ -1,6 +1,9 @@
 
 package controller;
 
+import daoImplent.ClientDaoImpl;
+import distribuidoraNorte.ClientModel;
+
 public class ClientController {
     
     protected static ClientController unique_instance = null;
@@ -15,8 +18,10 @@ public class ClientController {
     
     //methods
     
-    public void addClient(){
-        
+    public boolean addClient(ClientModel client){
+        ClientDaoImpl clientDao = new ClientDaoImpl();
+        boolean resSql = clientDao.addClientDao(client);
+        return resSql;
     }
     
     public void updateClient(){
