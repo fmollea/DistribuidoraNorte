@@ -20,7 +20,7 @@ public class FrameMain extends javax.swing.JFrame {
      */
     public FrameMain() {
         initComponents();
-        this.getContentPane().setBackground(Color.white);
+        this.getContentPane().setBackground(new Color(102,0,0));
         setIconImage(new ImageIcon(getClass().getResource("images/logo100.jpg")).getImage());
         //The frame is center
         this.setLocationRelativeTo(null);
@@ -41,13 +41,14 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonProvider = new javax.swing.JButton();
         ButtonProduct = new javax.swing.JButton();
         ButtonBuy = new javax.swing.JButton();
-        LabelTittle = new javax.swing.JLabel();
+        labelTittle = new javax.swing.JLabel();
         ExitButtin = new javax.swing.JButton();
-        LabelBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
+        setBackground(new java.awt.Color(102, 0, 0));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(545, 415));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ButtonSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/search.jpg"))); // NOI18N
@@ -141,6 +142,7 @@ public class FrameMain extends javax.swing.JFrame {
         ButtonProduct.setMaximumSize(new java.awt.Dimension(290, 266));
         ButtonProduct.setMinimumSize(new java.awt.Dimension(290, 266));
         ButtonProduct.setPreferredSize(new java.awt.Dimension(125, 125));
+        ButtonProduct.setRolloverEnabled(false);
         ButtonProduct.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ButtonProductMouseClicked(evt);
@@ -179,12 +181,12 @@ public class FrameMain extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonBuy, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
 
-        LabelTittle.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        LabelTittle.setForeground(new java.awt.Color(255, 255, 255));
-        LabelTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelTittle.setText("Gestor de Negocios");
-        LabelTittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(LabelTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 200, -1));
+        labelTittle.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        labelTittle.setForeground(new java.awt.Color(255, 255, 255));
+        labelTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelTittle.setText("Gestor de Negocios");
+        labelTittle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(labelTittle, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 200, -1));
 
         ExitButtin.setBackground(new java.awt.Color(102, 0, 0));
         ExitButtin.setForeground(new java.awt.Color(204, 204, 204));
@@ -194,11 +196,7 @@ public class FrameMain extends javax.swing.JFrame {
                 ExitButtinActionPerformed(evt);
             }
         });
-        getContentPane().add(ExitButtin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, -1, -1));
-
-        LabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/distNorteInterface/images/background.jpg"))); // NOI18N
-        LabelBackground.setText("jLabel1");
-        getContentPane().add(LabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 532, 435));
+        getContentPane().add(ExitButtin, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -362,7 +360,6 @@ public class FrameMain extends javax.swing.JFrame {
     private javax.swing.JButton ButtonProvider;
     private javax.swing.JButton ButtonSearch;
     private javax.swing.JButton ExitButtin;
-    private javax.swing.JLabel LabelBackground;
-    private javax.swing.JLabel LabelTittle;
+    private javax.swing.JLabel labelTittle;
     // End of variables declaration//GEN-END:variables
 }
