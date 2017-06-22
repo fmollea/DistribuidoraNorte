@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public interface ClientDao {
     
-    public void addClientDao(ClientModel client);
+    public boolean addClientDao(ClientModel client);
     
-    public void updateClientDao(ClientModel client);
+    public boolean updateClientDao(ClientModel client);
     
-    public void activeClientDao(ClientModel client);
+    public boolean activeClientDao(ClientModel client);
     
-    public void deleteClientDao(ClientModel client);
+    public boolean deleteClientDao(ClientModel client);
     
     //search client
     public ClientModel searchClientByCodeDao(String code);

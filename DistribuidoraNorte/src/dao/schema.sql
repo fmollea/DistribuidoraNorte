@@ -97,7 +97,5 @@ CREATE TRIGGER fixProduct_AfterBuy AFTER INSERT ON buy
 
 -- When the user invoice a product then update the product stock
 CREATE TRIGGER fixProduct_AfterInvoice AFTER INSERT ON invoiceProduct
-	FOR EACH ROW BEGIN
+	FOR EACH ROW 
   	   UPDATE product SET stock = stock - NEW.cant;
-           UPDATE client SET cantBought = cantBought + NEW.cant;
-        END   
