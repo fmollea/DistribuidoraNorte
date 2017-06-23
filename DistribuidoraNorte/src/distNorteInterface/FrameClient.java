@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package distNorteInterface;
 
 import com.sun.glass.events.KeyEvent;
 import distNorteInterface.clientPanels.PanelAddClient;
 import distNorteInterface.clientPanels.PanelDeleteClient;
+import distNorteInterface.clientPanels.PanelListClient;
+import distNorteInterface.clientPanels.PanelSearchClient;
 import distNorteInterface.clientPanels.PanelUpdateClient;
 import java.awt.*;  
 import javax.swing.*;
@@ -37,12 +34,20 @@ public class FrameClient extends javax.swing.JFrame {
         
         panelDeleteClient = new PanelDeleteClient();
         getContentPane().add(panelDeleteClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+        
+        panelListClient = new PanelListClient();
+        getContentPane().add(panelListClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+        
+        panelSearchClient = new PanelSearchClient();
+        getContentPane().add(panelSearchClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
     }
     
     public void hidePanels(){
         panelAddClient.setVisible(false);
         panelUpdateClient.setVisible(false);
         panelDeleteClient.setVisible(false);
+        panelListClient.setVisible(false);
+        panelSearchClient.setVisible(false);
     }
 
     /**
@@ -261,6 +266,16 @@ public class FrameClient extends javax.swing.JFrame {
         getContentPane().add(fondLeftLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 80));
 
         sButton.setText("Buscar");
+        sButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sButtonMouseClicked(evt);
+            }
+        });
+        sButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                sButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(sButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(628, 80, 128, 50));
 
         addButton.setText("Crear");
@@ -295,6 +310,16 @@ public class FrameClient extends javax.swing.JFrame {
         getContentPane().add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 80, 128, 50));
 
         lButton.setText("Listar");
+        lButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lButtonMouseClicked(evt);
+            }
+        });
+        lButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(lButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 128, 50));
 
         deleteButton.setText("Eliminar");
@@ -504,10 +529,40 @@ public class FrameClient extends javax.swing.JFrame {
         labelIcon.setVisible(false);
     }//GEN-LAST:event_deleteButtonMouseClicked
 
+    private void lButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            hidePanels();
+            panelListClient.setVisible(true);
+            labelIcon.setVisible(false);
+        }
+    }//GEN-LAST:event_lButtonKeyPressed
+
+    private void lButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lButtonMouseClicked
+        hidePanels();
+        panelListClient.setVisible(true);
+        labelIcon.setVisible(false);
+    }//GEN-LAST:event_lButtonMouseClicked
+
+    private void sButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            hidePanels();
+            panelSearchClient.setVisible(true);
+            labelIcon.setVisible(false);
+        }
+    }//GEN-LAST:event_sButtonKeyPressed
+
+    private void sButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sButtonMouseClicked
+        hidePanels();
+        panelSearchClient.setVisible(true);
+        labelIcon.setVisible(false);
+    }//GEN-LAST:event_sButtonMouseClicked
+
    
     private PanelAddClient panelAddClient;
     private PanelUpdateClient panelUpdateClient;
     private PanelDeleteClient panelDeleteClient;
+    private PanelListClient panelListClient;
+    private PanelSearchClient panelSearchClient;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuyButton;
     private javax.swing.JButton ExitButtin;
