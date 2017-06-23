@@ -118,6 +118,11 @@ public class PanelAddClient extends javax.swing.JPanel {
                 jButtonCreateMouseClicked(evt);
             }
         });
+        jButtonCreate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButtonCreateKeyPressed(evt);
+            }
+        });
 
         jButtonEmpty.setText("Vaciar Campos");
         jButtonEmpty.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -245,9 +250,9 @@ public class PanelAddClient extends javax.swing.JPanel {
         }                                  
         
     }//GEN-LAST:event_jButtonEmptyKeyPressed
-
+     
     // create a new client in my database
-    private void jButtonCreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCreateMouseClicked
+    private void createClient(){
         hideMessages();
         boolean resSqlClient = false;
         boolean resSqlPhone = false;
@@ -256,6 +261,7 @@ public class PanelAddClient extends javax.swing.JPanel {
         // I create different models per create my new client
         //client Model
         
+        //---------
         //I check the data
         String numAux = jTextFieldNumAddress.getText();
         Integer numAdd = null;
@@ -296,10 +302,18 @@ public class PanelAddClient extends javax.swing.JPanel {
         if (resSqlClient){
             emptyTextFields();
             messageOk.setVisible(true);
-        }    
-            
-                
+        }
+    }
+   
+    private void jButtonCreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCreateMouseClicked
+        createClient();
     }//GEN-LAST:event_jButtonCreateMouseClicked
+
+    private void jButtonCreateKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonCreateKeyPressed
+       if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            createClient();
+        }
+    }//GEN-LAST:event_jButtonCreateKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
