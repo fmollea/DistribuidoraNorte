@@ -7,6 +7,8 @@ package distNorteInterface;
 
 import com.sun.glass.events.KeyEvent;
 import distNorteInterface.clientPanels.PanelAddClient;
+import distNorteInterface.clientPanels.PanelDeleteClient;
+import distNorteInterface.clientPanels.PanelUpdateClient;
 import java.awt.*;  
 import javax.swing.*;
 
@@ -28,7 +30,20 @@ public class FrameClient extends javax.swing.JFrame {
     
     public void initPanels(){
         panelAddClient = new PanelAddClient();
-        getContentPane().add(panelAddClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));    }
+        getContentPane().add(panelAddClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+        
+        panelUpdateClient = new PanelUpdateClient();
+        getContentPane().add(panelUpdateClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+        
+        panelDeleteClient = new PanelDeleteClient();
+        getContentPane().add(panelDeleteClient, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+    }
+    
+    public void hidePanels(){
+        panelAddClient.setVisible(false);
+        panelUpdateClient.setVisible(false);
+        panelDeleteClient.setVisible(false);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -254,12 +269,27 @@ public class FrameClient extends javax.swing.JFrame {
                 addButtonMouseClicked(evt);
             }
         });
+        addButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                addButtonKeyPressed(evt);
+            }
+        });
         getContentPane().add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 128, 50));
 
         updateButton.setText("Modificar");
+        updateButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateButtonMouseClicked(evt);
+            }
+        });
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButtonActionPerformed(evt);
+            }
+        });
+        updateButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                updateButtonKeyPressed(evt);
             }
         });
         getContentPane().add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 80, 128, 50));
@@ -268,9 +298,19 @@ public class FrameClient extends javax.swing.JFrame {
         getContentPane().add(lButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 128, 50));
 
         deleteButton.setText("Eliminar");
+        deleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deleteButtonMouseClicked(evt);
+            }
+        });
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteButtonActionPerformed(evt);
+            }
+        });
+        deleteButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                deleteButtonKeyPressed(evt);
             }
         });
         getContentPane().add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 80, 128, 50));
@@ -422,13 +462,52 @@ public class FrameClient extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
-          panelAddClient.setVisible(true);
-          labelIcon.setVisible(false);
+        hidePanels();
+        panelAddClient.setVisible(true);
+        labelIcon.setVisible(false);
           
     }//GEN-LAST:event_addButtonMouseClicked
 
+    private void addButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_addButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            hidePanels();
+            panelAddClient.setVisible(true);
+            labelIcon.setVisible(false);
+        }
+    }//GEN-LAST:event_addButtonKeyPressed
+
+    private void updateButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_updateButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            hidePanels();
+            panelUpdateClient.setVisible(true);
+            labelIcon.setVisible(false);
+        }
+    }//GEN-LAST:event_updateButtonKeyPressed
+
+    private void updateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseClicked
+        hidePanels();
+        panelUpdateClient.setVisible(true);
+        labelIcon.setVisible(false);
+    }//GEN-LAST:event_updateButtonMouseClicked
+
+    private void deleteButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_deleteButtonKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            hidePanels();
+            panelDeleteClient.setVisible(true);
+            labelIcon.setVisible(false);
+        }
+    }//GEN-LAST:event_deleteButtonKeyPressed
+
+    private void deleteButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteButtonMouseClicked
+        hidePanels();
+        panelDeleteClient.setVisible(true);
+        labelIcon.setVisible(false);
+    }//GEN-LAST:event_deleteButtonMouseClicked
+
    
     private PanelAddClient panelAddClient;
+    private PanelUpdateClient panelUpdateClient;
+    private PanelDeleteClient panelDeleteClient;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuyButton;
     private javax.swing.JButton ExitButtin;
